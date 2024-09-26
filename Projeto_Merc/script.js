@@ -11,6 +11,11 @@ function loadComponent(id, file){
             document.getElementById(id).innerHTML = data;
         })
         .catch(error => console.log("Erro ao carregar o componente: ", error));
+
+        if(file == "cadastro_usuario.html"){
+            const form = document.getElementById('cadastroUsuario');
+        }
+
 }
 
 loadComponent("navbar", "navbar.html");
