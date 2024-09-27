@@ -9,16 +9,16 @@ const port = 3001;
 
 // Configuração do pool de conexão com o PostgreSQL
 const pool = new Pool({
-    user: 'postgres',
+    user: 'Ricardo',
     host: 'localhost',
-    database: 'Ricardo',
-    password: '3ti2006',
+    database: 'Mercado_App',
+    password: 'Furla290896*',
     port: 5432,
 });
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'Projeto_Merc'))); // Serve arquivos estáticos da pasta Projeto_Merc
 
 // Rota para redirecionar a raiz para index.html
@@ -27,12 +27,16 @@ app.get('/', (req, res) => {
 });
 
 // Rota para inserir dados
-app.post('/api/inserir', async (req, res) => {
-    const { nome, marca, qtde, preco } = req.body;
+app.post('/usuarios', async (req, res) => {
+    const {nome_usuario} = req.body;
+
+    if(!nome_usuario || nome_usuario.trim() === ''){
+        return res.status(400).json({error: "Nome Obrigatório"});
+    }
 
     try {
-        const query = 'INSERT INTO sua_tabela (nome, marca, qtde, preco) VALUES ($1, $2, $3, $4)';
-        await pool.query(query, [nome, marca, qtde, preco]);
+        const query = 'INSERT INTO usuarios (nome) VALUES ($1)';
+        await pool.query(query, [nome_usuario]);
         res.status(201).json({ message: 'Dados inseridos com sucesso!' });
     } catch (error) {
         console.error(error);
