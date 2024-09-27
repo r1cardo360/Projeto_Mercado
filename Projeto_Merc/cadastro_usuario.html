@@ -1,11 +1,11 @@
 <h1 class="titulo-cadastro-usuario">Cadastro de Usuários</h1>
 
 <div class="col">
-    <form id="cadastroUsuario" method="post" action="/usuarios">
+    <form id="cadastroUsuario">
         <div class="row-sm">
             <label for="" class="form-label">Nome:</label>
             <input type="text" class="form-control form-control-sm" id="nome_usuario" name="nome_usuario" placeholder="Seu nome" required>
         </div>
-        <input type="submit" title="Enviar" class="btn btn-primary mt-5">
+        <input type="submit" title="Enviar" class="btn btn-primary mt-5" onclick="enviarUsuario()">
     </form>
 </div>
