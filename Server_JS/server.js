@@ -9,10 +9,10 @@ const port = 3001;
 
 // Configuração do pool de conexão com o PostgreSQL
 const pool = new Pool({
-    user: 'Ricardo',
+    user: 'postgres',
     host: 'localhost',
-    database: 'Mercado_App',
-    password: 'Furla290896*',
+    database: 'Ricardo',
+    password: '3ti2006',
     port: 5432,
 });
 
@@ -24,6 +24,22 @@ app.use(express.static(path.join(__dirname, '..', 'Projeto_Merc'))); // Serve ar
 // Rota para redirecionar a raiz para index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'Projeto_Merc')); // Caminho para index.html
+});
+
+app.get('/carrinho', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'Projeto_Merc', 'carrinho.html')); // Caminho para index.html
+});
+
+app.get('/cadastro_usuario', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'Projeto_Merc', 'cadastro_usuario.html')); // Caminho para index.html
+});
+
+app.get('/cadastro_produto', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'Projeto_Merc', 'cadastro_produto.html')); // Caminho para index.html
+});
+
+app.get('/cadastro_estabelecimento', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'Projeto_Merc', 'cadastro_estabelecimento.html')); // Caminho para index.html
 });
 
 // Rota para inserir dados
