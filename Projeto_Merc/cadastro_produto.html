@@ -19,18 +19,18 @@
     <h1 class="tituloH1 text-center">Cadastro de Produtos</h1>
 
     <div class="container container-produto">
-
-        <div class="col">
-            <div class="row-sm">
-                <label for="" class="form-label">Nome:</label>
-                <input type="text" class="form-control form-control-sm" placeholder="Nome do Produto">
+        <form action="produto" method="post" validate>
+            <div class="col">
+                <div class="row-sm">
+                    <label for="" class="form-label">Nome:</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="Nome do Produto" autocomplete="off" required>
+                </div>
             </div>
-        </div>
 
-        <div>
-            <input class="btn btn-primary mt-4" type="submit" name="enviar_produto" id="enviar_produto">
-        </div>
-
+            <div>
+                <input class="btn btn-primary mt-4" type="submit" name="enviar_produto" id="enviar_produto">
+            </div>
+        </form>
     </div>
 
 </body>
