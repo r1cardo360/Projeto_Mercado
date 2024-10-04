@@ -4,33 +4,6 @@ function menuOnClick() {
     document.getElementById("menu-bg").classList.toggle("change-bg");
   }
 
-  function enviarUsuario(){
-    document.getElementById("cadastroUsuario").addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        const nome_usuario = document.getElementById("nome_usuario").value;
-
-        const response = await fetch('/usuarios',{
-            method: "post",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({nome_usuario})
-        });
-
-        document.getElementById("nome_usuario").value = '';
-
-        if(response.ok){
-            const data = await response.json();
-            alert(data.message);
-        }else{
-            const errorData = await response.json();
-            alert(errorData.error);
-        }
-
-    })
-  }
-
 function loadComponent(id, file){
     fetch(file)
         .then(response => response.text())
@@ -44,23 +17,6 @@ function loadComponent(id, file){
         }
 
 }
-
-(function(){
-    'use strict'
-
-    var forms = document.querySelectorAll('.needs-validation');
-
-    Array.prototype.slice.call(forms);
-        forEach(function(form) {
-            form.addEventListener('submit', function(event){
-                if(!form.checkValidity()){
-                    event.preventDefault();
-                    event.preventPropagation();
-                }
-                form.classList.add('was-validated')
-            }, false);
-        });
-})()
 
 loadComponent("navbar", "navbar.html");
 loadComponent("content", "carrinho.html");

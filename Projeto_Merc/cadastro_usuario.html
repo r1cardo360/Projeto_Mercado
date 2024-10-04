@@ -1,11 +1,13 @@
+<script src="./scriptCadastroUsuario.js" defer></script>
+
 <h1 class="titulo-cadastro-usuario">Cadastro de Usuários</h1>
 
 <div class="col">
-    <form id="cadastroUsuario needs-validation" novalidate>
+    <form id="cadastroUsuario" method="post" validate>
         <div class="row-sm">
             <label for="" class="form-label">Nome:</label>
             <input type="text" class="form-control form-control-sm" id="nome_usuario" name="nome_usuario" placeholder="Seu nome" required>
         </div>
-        <input type="submit" title="Enviar" class="btn btn-primary mt-5" onclick="enviarUsuario()">
+        <input type="submit" title="Enviar" class="btn btn-primary mt-5">
     </form>
 </div>

@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, '..', 'Projeto_Merc'))); // Serve ar
 
 // Rota para redirecionar a raiz para index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'Projeto_Merc', 'index.html')); // Caminho para index.html
+    res.sendFile(path.join(__dirname, '..', 'Projeto_Merc')); // Caminho para index.html
 });
 
 // Rota para inserir dados
