@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="hamburguer.css">
+    <link rel="stylesheet" href="cadastroEstabelecimento.css">
     <script src="./script.js" defer></script>
     <title>Mercado</title>
 </head>
@@ -15,29 +16,38 @@
         <div id="navbar"></div>
     </div>
 
-    <h1 class="titulo-cadastro-usuario">Cadastro de Estabelecimento</h1>
+    <h1 class="titulo-cadastro-usuario text-center">Cadastro de Estabelecimento</h1>
 
-    <div class="col">
-        <div class="row-sm">
-            <label for="" class="form-label">Nome:</label>
-            <input type="text" class="form-control form-control-sm" placeholder="Nome do Estabelecimento">
-        </div>
-        <div class="row-sm">
-            <label for="" class="form-label">Segmento:</label>
-            <input type="text" class="form-control form-control-sm" placeholder="Segmento onde atua">
-        </div>
-        <div class="row-sm">
-            <label for="" class="form-label">Logradouro:</label>
-            <input type="text" class="form-control form-control-sm" placeholder="Logradouro">
-        </div>
-        <div class="row-sm">
-            <label for="" class="form-label">Bairro:</label>
-            <input type="text" class="form-control form-control-sm" placeholder="Bairro">
-        </div>
-        <div class="row-sm">
-            <label for="" class="form-label">Número:</label>
-            <input type="number" class="form-control form-control-sm" placeholder="Número">
-        </div>
+    <div class="container">
+        <form action="/estabelecimento" method="post">
+            <div class="col">
+                <div class="row-sm">
+                    <label for="" class="form-label">Nome:</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="Nome do Estabelecimento" required autocomplete="off">
+                </div>
+                <div class="row-sm">
+                    <label for="" class="form-label">Segmento:</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="Segmento onde atua" required autocomplete="off">
+                </div>
+                <div class="row-sm">
+                    <label for="" class="form-label">Logradouro:</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="Logradouro" autocomplete="off">
+                </div>
+                <div class="row-sm">
+                    <label for="" class="form-label">Bairro:</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="Bairro" autocomplete="off">
+                </div>
+                <div class="row-sm">
+                    <label for="" class="form-label">Número:</label>
+                    <input type="number" class="form-control form-control-sm" placeholder="Número" autocomplete="off">
+                </div>
+            </div>
+
+            <div>
+                <input class="btn btn-primary mt-4" type="submit" name="enviar_estabelecimento" id="enviar_estabelecimento">
+            </div>
+
+        </form>
     </div>
 
 </body>
