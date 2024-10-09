@@ -18,7 +18,7 @@
 
     <h1 class="tituloH1 text-center">Cadastro de Produtos</h1>
 
-    <div class="container container-produto">
+    <div class="container container-estilizado">
         <form action="produto" method="post" validate>
             <div class="col">
                 <div class="row-sm">
@@ -31,6 +31,27 @@
                 <input class="btn btn-primary mt-4" type="submit" name="enviar_produto" id="enviar_produto">
             </div>
         </form>
+    </div>
+
+    <div class="container container-estilizado">
+        <table class="table table-sm small table-ligth table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Bolacha</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Miojo</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>

@@ -2,3 +2,11 @@
 .titulo-cadastro-produto{
     font-size: 1.5rem;
 }
+
+
+.container-produto{
+    border: 2px solid #cecece;
+    padding: 20px 10;
+    border-radius: 20px;
+    width: 90%;
+}

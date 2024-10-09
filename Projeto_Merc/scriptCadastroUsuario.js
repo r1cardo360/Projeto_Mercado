@@ -1,5 +1,4 @@
 document.getElementById("cadastroUsuario").addEventListener('submit', async (event) => {
-    console.log("teste");
     event.preventDefault();
     
     const nome_usuario = document.getElementById("nome_usuario").value;
@@ -22,4 +21,4 @@ document.getElementById("cadastroUsuario").addEventListener('submit', async (eve
         alert(errorData.error);
     }
 
-})
+});
