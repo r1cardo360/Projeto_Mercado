@@ -30,7 +30,7 @@ app.get('/carrinho', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'Projeto_Merc', 'carrinho.html')); // Caminho para index.html
 });
 
-app.get('/cadastro_usuario', (req, res) => {
+app.get('/cadastro_usuario', async (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'Projeto_Merc', 'cadastro_usuario.html')); // Caminho para index.html
 });
 
@@ -61,9 +61,9 @@ app.post('/usuarios', async (req, res) => {
 });
 
 // Rota para listar dados
-app.get('/api/items', async (req, res) => {
+app.get('/api/getUsuarios', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM sua_tabela');
+        const result = await pool.query('SELECT * FROM usuarios');
         res.status(200).json(result.rows);
     } catch (error) {
         console.error(error);

@@ -24,7 +24,7 @@
             <form id="cadastroUsuario" method="post" action="usuarios" validate>
                 <div class="row-sm">
                     <label for="" class="form-label">Nome:</label>
-                    <input type="text" class="form-control form-control-sm" id="nome_usuario" name="nome_usuario" placeholder="Seu nome" required>
+                    <input type="text" class="form-control form-control-sm" id="nome_usuario" name="nome_usuario" placeholder="Seu nome" autocomplete="off" required>
                 </div>
                 <input type="submit" title="Enviar" class="btn btn-primary mt-4">
             </form>
@@ -32,22 +32,15 @@
     </div>
 
     <div class="container container-estilizado">
-        <table class="table table-sm small">
+        <table class="table table-sm small table-ligth table-striped" id="tabela-principal">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Ricardo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Vitória</td>
-                </tr>
+            <tbody id="tabela-usuario">
+                
             </tbody>
         </table>
         <div class="container-fluid d-flex justify-content-around">
